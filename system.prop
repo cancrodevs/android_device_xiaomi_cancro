@@ -61,6 +61,8 @@ audio_hal.period_size=192
 
 ro.qualcomm.perf.cores_online=1
 dalvik.vm.dex2oat-swap=false
+dalvik.vm.boot-dex2oat-threads=4
+dalvik.vm.dex2oat-threads=3
 ro.gps.agps_provider=1
 persist.debug.wfd.enable=1
 persist.demo.hdmirotationlock=false
