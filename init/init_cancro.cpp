@@ -119,7 +119,10 @@ void vendor_load_properties()
         case 1974:
             property_set("ro.product.model", "MI 4");
             break;
-        case 1972:
+        case 1973:
+            property_set("ro.product.model", "MI 4CDMA");
+            break;
+	case 1972:
             property_set("ro.product.model", "MI 4LTE");
             property_set("ro.telephony.default_network", "8");
             property_set("telephony.lteOnGSMDevice", "1");
