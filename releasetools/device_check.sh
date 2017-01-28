@@ -27,6 +27,14 @@ if [ $RAW_ID == 1974 ] || [ $RAW_ID == 1973 ] || [ $RAW_ID == 1972 ]; then
     rm -rf /system/etc/permissions/*nfc*
     rm -rf /system/vendor/firmware/*bcm*
     # Use Mi4 audio configs
+    rm -f /system/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb
+    mv /system/etc/acdbdata/MTP/MTP_Bluetooth_cal_4.acdb /system/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb
+    rm -f /system/etc/acdbdata/MTP/MTP_Global_cal.acdb
+    mv /system/etc/acdbdata/MTP/MTP_Global_cal_4.acdb /system/etc/acdbdata/MTP/MTP_Global_cal.acdb
+    rm -f /system/etc/acdbdata/MTP/MTP_Handset_cal.acdb
+    mv /system/etc/acdbdata/MTP/MTP_Handset_cal_4.acdb /system/etc/acdbdata/MTP/MTP_Handset_cal.acdb
+    rm -f /system/etc/acdbdata/MTP/MTP_Headset_cal.acdb
+    mv /system/etc/acdbdata/MTP/MTP_Headset_cal_4.acdb /system/etc/acdbdata/MTP/MTP_Headset_cal.acdb
     rm -f /system/etc/acdbdata/MTP/MTP_Speaker_cal.acdb
     mv /system/etc/acdbdata/MTP/MTP_Speaker_cal_4.acdb /system/etc/acdbdata/MTP/MTP_Speaker_cal.acdb
     rm -f /system/etc/mixer_paths.xml
@@ -36,6 +44,10 @@ if [ $RAW_ID == 1974 ] || [ $RAW_ID == 1973 ] || [ $RAW_ID == 1972 ]; then
     mv /system/vendor/etc/diracmobile_4.config /system/vendor/etc/diracmobile.config
 else
     # Remove Mi4 audio configs
+    rm -f /system/etc/acdbdata/MTP/MTP_Bluetooth_cal_4.acdb
+    rm -f /system/etc/acdbdata/MTP/MTP_Global_cal_4.acdb
+    rm -f /system/etc/acdbdata/MTP/MTP_Handset_cal_4.acdb
+    rm -f /system/etc/acdbdata/MTP/MTP_Headset_cal_4.acdb
     rm -rf /system/etc/acdbdata/MTP/MTP_Speaker_cal_4.acdb
     rm -f /system/etc/mixer_paths_4.xml
     # Remove Mi4 libdirac config

@@ -505,6 +505,10 @@
         <ctl name="Voice2_Tx Mixer SLIM_0_TX_Voice2" value="1" />
     </path>
 
+    <path name="voice2-call speaker">
+        <path name="voice2-call" />
+    </path>
+
     <path name="voice2-call hdmi">
         <ctl name="HDMI_RX_Voice Mixer Voice2" value="1" />
         <ctl name="Voice2_Tx Mixer SLIM_0_TX_Voice2" value="1" />
@@ -898,7 +902,7 @@
         <ctl name="RX7 MIX1 INP1" value="RX1" />
         <ctl name="COMP0 Switch" value="1" />
         <ctl name="RX7 Digital Volume" value="84" />
-        <ctl name="SPK DRV Volume" value="10" />
+        <ctl name="SPK DRV Volume" value="8" />
     </path>
 
     <path name="vi-feedback">
@@ -925,11 +929,11 @@
         <ctl name="SLIM TX7 MUX" value="DEC2" />
         <ctl name="DEC2 MUX" value="ADC5" />
         <ctl name="DEC2 Volume" value="84" />
-        <ctl name="ADC5 Volume" value="12" />
+        <ctl name="ADC5 Volume" value="3" />
         <ctl name="SLIM TX8 MUX" value="DEC3" />
         <ctl name="DEC3 MUX" value="ADC4" />
         <ctl name="DEC3 Volume" value="84" />
-        <ctl name="ADC4 Volume" value="12" />
+        <ctl name="ADC4 Volume" value="3" />
         <ctl name="SLIM_0_TX Channels" value="Two" />
     </path>
 
@@ -1193,11 +1197,11 @@
         <ctl name="SLIM TX7 MUX" value="DEC2" />
         <ctl name="DEC2 MUX" value="ADC5" />
         <ctl name="DEC2 Volume" value="84" />
-        <ctl name="ADC5 Volume" value="12" />
+        <ctl name="ADC5 Volume" value="3" />
         <ctl name="SLIM TX8 MUX" value="DEC3" />
         <ctl name="DEC3 MUX" value="ADC4" />
         <ctl name="DEC3 Volume" value="84" />
-        <ctl name="ADC4 Volume" value="12" />
+        <ctl name="ADC4 Volume" value="3" />
         <ctl name="SLIM_0_TX Channels" value="Two" />
     </path>
 
