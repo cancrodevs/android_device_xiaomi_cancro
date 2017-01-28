@@ -1,6 +1,7 @@
 app/shutdownlistener/shutdownlistener.apk
 app/TimeService/TimeService.apk
 bin/adsprpcd
+bin/atmel_hover_tune.sh
 bin/btnvtool
 bin/charger_monitor
 bin/fm_qsoc_patches
