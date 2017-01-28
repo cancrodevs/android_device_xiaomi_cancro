@@ -91,8 +91,8 @@ lib/rfsa/adsp/libfastcvadsp.so
 lib/rfsa/adsp/libfastcvadsp_skel.so
 lib/rfsa/adsp/libscveT2T_skel.so
 priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
-vendor/firmware/bcm2079x-b5_firmware.ncd
-vendor/firmware/bcm2079x-b5_pre_firmware.ncd
+vendor/firmware/BCM20791B5_002.006.013.0011.0104_Customers_China_NCD_Unsigned_configdata.ncd
+vendor/firmware/PreI2C_v470.ncd
 vendor/firmware/keymaster/keymaster.b00
 vendor/firmware/keymaster/keymaster.b01
 vendor/firmware/keymaster/keymaster.b02
