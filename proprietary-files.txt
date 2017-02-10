@@ -1,4 +1,3 @@
-../sbin/chargeonlymode
 app/shutdownlistener/shutdownlistener.apk
 app/TimeService/TimeService.apk
 bin/adsprpcd
