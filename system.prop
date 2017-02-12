@@ -74,7 +74,6 @@ af.fast_track_multiplier=1
 audio_hal.period_size=192
 audio.offload.buffer.size.kb=32
 
-ro.qualcomm.perf.cores_online=1
 dalvik.vm.dex2oat-swap=false
 ro.gps.agps_provider=1
 persist.debug.wfd.enable=1
