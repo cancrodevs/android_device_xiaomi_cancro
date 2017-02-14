@@ -71,6 +71,7 @@ persist.audio.fluence.voicerec=false
 persist.audio.fluence.speaker=false
 af.fast_track_multiplier=1
 audio_hal.period_size=192
+audio.offload.buffer.size.kb=32
 
 ro.qualcomm.perf.cores_online=1
 dalvik.vm.dex2oat-swap=false
