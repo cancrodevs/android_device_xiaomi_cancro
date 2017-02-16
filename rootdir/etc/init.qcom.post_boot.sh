@@ -148,12 +148,13 @@ case "$target" in
         chown system.system /sys/module/cpu_boost/parameters/sync_threshold
         chown system.system /sys/module/cpu_boost/parameters/input_boost_freq
         chown system.system /sys/module/cpu_boost/parameters/input_boost_ms
+        chmod -h 0660 /sys/power/wake_lock
+        chmod -h 0660 /sys/power/wake_unlock
+        chown radio.system /sys/power/wake_lock
+        chown radio.system /sys/power/wake_unlock        
         echo 1 > /dev/cpuctl/apps/cpu.notify_on_migrate
         start mpdecision
         setprop sys.perf.profile `getprop sys.perf.profile`
-	#permissions for charger_monitor
-	chmod -h 660 /sys/power/wake_lock
-	chown radio.system /sys/power/wake_lock
     ;;
 esac
 
