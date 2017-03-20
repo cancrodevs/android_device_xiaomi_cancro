@@ -98,8 +98,6 @@ ro.qualcomm.bt.hci_transport=smd
 ro.bluetooth.dun=false
 ro.bluetooth.sap=false
 
-ro.sys.sdcardfs=true
-
 # Enalbe modem fast dormancy function
 persist.env.fastdorm.enabled=true
 persist.data.tcp_rst_drop=true
