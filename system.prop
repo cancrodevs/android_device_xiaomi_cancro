@@ -35,6 +35,7 @@ vidc.debug.level=1
 qcom.bt.dev_power_class=1
 bluetooth.hfp.client=1
 ro.bluetooth.alwaysbleon=true
+persist.bt.enableAptXHD=true
 
 # System property for cabl
 ro.qualcomm.cabl=1
