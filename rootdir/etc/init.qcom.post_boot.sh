@@ -205,10 +205,6 @@ case "$target" in
             ;;
         esac
         echo 1 > /sys/kernel/msm_thermal/enabled
-        echo 268800 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-        echo 268800 > /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq
-        echo 268800 > /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq
-        echo 268800 > /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq
         chown -h root.system /sys/devices/system/cpu/mfreq
         chmod -h 220 /sys/devices/system/cpu/mfreq
         chown -h root.system /sys/devices/system/cpu/cpu1/online
@@ -263,13 +259,6 @@ esac
 
 case "$target" in
     "msm8974")
-         rm /data/system/perfd/default_values
-         echo 896 > /sys/block/mmcblk0/bdi/read_ahead_kb
-	;;
-esac
-
-case "$target" in
-    "msm8974")
         # Let kernel know our image version/variant/crm_version
         image_version="10:"
         image_version+=`getprop ro.build.id`
@@ -304,7 +293,8 @@ esac
 case "$target" in
     "msm8974")
         start mpdecision
-        echo 512 > /sys/block/mmcblk0/bdi/read_ahead_kb
+        rm /data/system/perfd/default_values
+        echo 896 > /sys/block/mmcblk0/bdi/read_ahead_kb
     ;;
 esac
 
