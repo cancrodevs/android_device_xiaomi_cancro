@@ -65,7 +65,6 @@ KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/arm/arm-linux-a
 KERNEL_TOOLCHAIN_PREFIX := arm-linux-androideabi-
 
 # Vendor Init
-TARGET_UNIFIED_DEVICE       := true
 TARGET_INIT_VENDOR_LIB      := libinit_cancro
 TARGET_LIBINIT_DEFINES_FILE := $(CANCRO_PATH)/init/init_cancro.cpp
 
