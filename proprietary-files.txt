@@ -518,6 +518,7 @@ vendor/lib/libwvdrm_L3.so
 vendor/lib/libWVphoneAPI.so
 vendor/lib/libWVStreamControlAPI_L3.so
 vendor/lib/mediadrm/libwvdrmengine.so
+vendor/lib/libwvm.so
 
 # WiFi
 bin/lowi-server
