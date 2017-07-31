@@ -111,3 +111,4 @@ persist.fd.scron.timer=10000
 persist.radio.ignore_dom_time=5
 
 persist.media.treble_omx=false
+debug.hwui.use_buffer_age=false
