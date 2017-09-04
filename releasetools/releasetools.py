@@ -32,7 +32,7 @@ def AddBasebandAssertion(info):
     if m:
         versions = m.group(1).split('|')
         if len(versions) and '*' not in versions:
-            cmd = 'assert(cancro.verify_baseband(' + ','.join(['"%s"' % baseband for baseband in versions]) + ') == "1");'
+            cmd = 'ui_print("BaseBand Assertion is disabled!");'
             info.script.AppendExtra(cmd)
     return
 
