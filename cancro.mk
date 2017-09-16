@@ -32,7 +32,7 @@ PRODUCT_PACKAGES += \
 # GPS
 PRODUCT_PACKAGES += \
     gps.msm8974
- 
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/etc/gps.conf:system/etc/gps.conf \
     $(LOCAL_PATH)/gps/etc/flp.conf:system/etc/flp.conf \
@@ -45,6 +45,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 #PRODUCT_PACKAGES += \
+     libshim_atomic
 #    camera.msm8974 \
 #    libxml2 \
 #    Snap
@@ -53,7 +54,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libshims_wvm
 
-# IPv6 
+# IPv6
 PRODUCT_PACKAGES += \
     ebtables \
     ethertypes \
@@ -316,3 +317,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # call the proprietary setup
 $(call inherit-product, vendor/xiaomi/cancro/cancro-vendor.mk)
+
