@@ -508,12 +508,8 @@ etc/firmware/venus.b04
 etc/firmware/venus.mbn
 etc/firmware/venus.mdt
 
-# Widevine
-vendor/lib/libwvdrm_L3.so
-vendor/lib/libWVphoneAPI.so
-vendor/lib/libWVStreamControlAPI_L3.so
-vendor/lib/mediadrm/libwvdrmengine.so
-vendor/lib/libwvm.so
+# Widevine - from angler - OPR6.170623.017 factory image
+vendor/lib/mediadrm/libwvdrmengine.so|66ba66d047044f92eb0eada1faf6a5799ded90ab
 
 # WiFi
 bin/lowi-server
