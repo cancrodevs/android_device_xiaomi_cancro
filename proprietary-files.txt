@@ -351,7 +351,6 @@ vendor/lib/libdrmfs.so
 vendor/lib/libdrmtime.so
 vendor/lib/librpmb.so
 vendor/lib/libssd.so
-vendor/lib/mediadrm/libdrmclearkeyplugin.so
 
 # Firmware
 lib/libstm-log.so
