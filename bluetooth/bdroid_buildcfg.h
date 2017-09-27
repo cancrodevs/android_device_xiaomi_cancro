@@ -1,10 +1,5 @@
 /*
- *
- *  Copyright (c) 2013, The Linux Foundation. All rights reserved.
- *  Not a Contribution, Apache license notifications and license are retained
- *  for attribution purposes only.
- *
- * Copyright (C) 2012 The Android Open Source Project
+ * Copyright (C) 2014 The CyanogenMod Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,15 +17,10 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
 
-#define BLUETOOTH_QTI_SW TRUE
+#define BTM_DEF_LOCAL_NAME        "Xiaomi Mi4"
 
-#define BTM_DEF_LOCAL_NAME   "Xiaomi MI4"
-// Enables Interleave scan
-#define BTA_SKIP_BLE_READ_REMOTE_FEAT TRUE
-#define BTA_HOST_INTERLEAVE_SEARCH  TRUE
-#define MAX_L2CAP_CHANNELS    16
-// skips conn update at conn completion
-#define BTA_BLE_SKIP_CONN_UPD  TRUE
-#define BT_CLEAN_TURN_ON_DISABLED 1
+#define BLE_VND_INCLUDED          TRUE
+#define BLUETOOTH_QTI_SW          TRUE
+#define BT_CLEAN_TURN_ON_DISABLED TRUE
 
 #endif
