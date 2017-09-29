@@ -253,6 +253,9 @@ on boot
     chown system system /sys/class/leds/blue/ramp_step_ms
     chown system system /sys/class/leds/blue/blink
 
+    # Bluetooth MAC address
+    chown bluetooth bluetooth /sys/module/htc_bdaddress/parameters/bdaddress
+
     # Wifi firmware reload path
     chown wifi wifi /sys/module/wlan/parameters/fwpath
 
