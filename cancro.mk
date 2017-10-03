@@ -161,7 +161,6 @@ PRODUCT_COPY_FILES += \
 # Media & Audio
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
-    libdivxdrmdecrypt \
     libOmxAacEnc \
     libOmxAmrEnc \
     libOmxCore \
