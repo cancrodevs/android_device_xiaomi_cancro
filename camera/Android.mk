@@ -6,6 +6,7 @@ LOCAL_SRC_FILES := \
     CameraWrapper.cpp
 
 LOCAL_C_INCLUDES := \
+    frameworks/native/include/media/openmax \
     system/media/camera/include
 
 LOCAL_STATIC_LIBRARIES := libbase libarect

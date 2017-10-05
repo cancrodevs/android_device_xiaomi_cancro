@@ -27,13 +27,14 @@
 
 #define LOG_TAG "CameraWrapper"
 #include <cutils/log.h>
-
+#include <cutils/native_handle.h>
 #include <utils/threads.h>
 #include <utils/String8.h>
 #include <hardware/hardware.h>
 #include <hardware/camera.h>
 #include <camera/Camera.h>
 #include <camera/CameraParameters.h>
+#include <media/hardware/HardwareAPI.h> // For VideoNativeHandleMetadata
 
 static android::Mutex gCameraWrapperLock;
 static camera_module_t *gVendorModule = 0;
@@ -376,6 +377,9 @@ static int camera_recording_enabled(struct camera_device *device)
 static void camera_release_recording_frame(struct camera_device *device,
         const void *opaque)
 {
+    android::VideoNativeHandleMetadata* md = (android::VideoNativeHandleMetadata*) opaque;
+    native_handle_t* nh = md->pHandle;
+
     ALOGV("%s->%08X->%08X", __FUNCTION__, (uintptr_t)device,
             (uintptr_t)(((wrapper_camera_device_t*)device)->vendor));
 
@@ -383,6 +387,8 @@ static void camera_release_recording_frame(struct camera_device *device,
         return;
 
     VENDOR_CALL(device, release_recording_frame, opaque);
+    native_handle_close(nh);
+    native_handle_delete(nh);
 }
 
 static int camera_auto_focus(struct camera_device *device)
