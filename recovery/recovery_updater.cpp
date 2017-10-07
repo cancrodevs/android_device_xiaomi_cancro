@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2016, The CyanogenMod Project
+ * Copyright (C) 2017, The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,8 +26,10 @@
 #include <string.h>
 #include <unistd.h>
 
+#include <string>
+#include <vector>
+
 #include "edify/expr.h"
-#include "updater/install.h"
 
 #define MAX(a, b) (((a) > (b)) ? (a) : (b))
 
@@ -34,10 +37,9 @@
 #define KB 1024
 
 #define BASEBAND_PART_PATH "/dev/block/platform/msm_sdcc.1/by-name/modem"
-#define BASEBAND_VER_STR_START "MPSS.DI."
-#define BASEBAND_VER_STR_START_LEN 8
+#define BASEBAND_VER_STR "MPSS.DI."
+#define BASEBAND_VER_STR_LEN 8
 #define BASEBAND_VER_BUF_LEN 255
-#define BASEBAND_SZ 64000 * KB    /* MMAP 64M of BASEBAND, BASEBAND partition is 64M */
 
 /* Boyer-Moore string search implementation from Wikipedia */
 
@@ -120,6 +122,7 @@ static char * bm_search(const char *str, size_t str_len, const char *pat,
 static int get_baseband_version(char *ver_str, size_t len) {
     int ret = 0;
     int fd;
+    int baseband_sz;
     char *baseband_data = NULL;
     char *offset = NULL;
 
@@ -129,21 +132,27 @@ static int get_baseband_version(char *ver_str, size_t len) {
         goto err_ret;
     }
 
-    baseband_data = (char *) mmap(NULL, BASEBAND_SZ, PROT_READ, MAP_PRIVATE, fd, 0);
+    baseband_sz = lseek64(fd, 0, SEEK_END);
+    if (baseband_sz == -1) {
+        ret = errno;
+        goto err_fd_close;
+    }
+
+    baseband_data = (char *) mmap(NULL, baseband_sz, PROT_READ, MAP_PRIVATE, fd, 0);
     if (baseband_data == (char *)-1) {
         ret = errno;
         goto err_fd_close;
     }
 
     /* Do Boyer-Moore search across BASEBAND data */
-    offset = bm_search(baseband_data, BASEBAND_SZ, BASEBAND_VER_STR_START, BASEBAND_VER_STR_START_LEN);
+    offset = bm_search(baseband_data, baseband_sz, BASEBAND_VER_STR, BASEBAND_VER_STR_LEN);
     if (offset != NULL) {
-        strncpy(ver_str, offset, len);
+		strncpy(ver_str, offset + BASEBAND_VER_STR_LEN, len);
     } else {
         ret = -ENOENT;
     }
 
-    munmap(baseband_data, BASEBAND_SZ);
+    munmap(baseband_data, baseband_sz);
 err_fd_close:
     close(fd);
 err_ret:
@@ -151,38 +160,37 @@ err_ret:
 }
 
 /* verify_baseband("BASEBAND_VERSION", "BASEBAND_VERSION", ...) */
-Value * VerifyBasebandFn(const char *name, State *state, int argc, Expr *argv[]) {
+Value* VerifyBasebandFn(const char* name, State* state,
+                     const std::vector<std::unique_ptr<Expr>>& argv) {
     char current_baseband_version[BASEBAND_VER_BUF_LEN];
-    char *baseband_version;
-    int i, ret;
+    int ret;
 
     ret = get_baseband_version(current_baseband_version, BASEBAND_VER_BUF_LEN);
     if (ret) {
-        return ErrorAbort(state, "%s() failed to read current BASEBAND version: %d",
-                name, ret);
+        return ErrorAbort(state, kFreadFailure,
+                "%s() failed to read current baseband version:", name, ret);
     }
 
-    for (i = 0; i < argc; i++) {
-        baseband_version = Evaluate(state, argv[i]);
-        if (baseband_version < 0) {
-            return ErrorAbort(state, "%s() error parsing arguments: %d",
-                name, baseband_version);
-        }
-
-        uiPrintf(state, "Checking for BASEBAND version %s", baseband_version);
-
+    std::vector<std::string> args;
+    if (!ReadArgs(state, argv, &args)) {
+        return ErrorAbort(state, kArgsParsingFailure, "%s() error parsing arguments", name);
+    }
+    
+	ret = 0;
+	
+    for (auto& baseband_version : args) {
         /**
          * @param count is hardcoded to 11 to check "MPSS.DI.?.0" value only
          *   because xiaomi changes the other 8 chars every weekly update
          *   and we just need a MPSS.DI.4.0 baseband
          */
-        if (strncmp(baseband_version, current_baseband_version, 11) == 0) {
-            return StringValue(strdup("1"));
+        if (strncmp(baseband_version.c_str(), current_baseband_version, 11) == 0){
+            ret = 1;
+            break;
         }
     }
-
-    uiPrintf(state, "ERROR: It appears you are running an unsupported baseband. Please visit   http://bit.ly/cancroCMBaseband   to learn how to update.");
-    return StringValue(strdup("0"));
+    
+    return StringValue(strdup(ret ? "1" : "0"));
 }
 
 void Register_librecovery_updater_cancro() {
