@@ -44,7 +44,7 @@ on early-boot
     # Do not allow subsystem (modem etc) debugging
     # write /sys/module/subsystem_restart/parameters/enable_debug ${persist.sys.ssr.enable_debug}
     write /sys/kernel/boot_adsp/boot 1
-    exec u:r:qti_init_shell:s0 -- /init.qcom.early_boot.sh
+    exec /init.qcom.early_boot.sh
 
 on boot
     # bring CPUs online
@@ -562,7 +562,6 @@ service hciattach /system/bin/sh /system/etc/init.qcom.bt.sh
     user bluetooth
     group bluetooth net_bt_admin
     disabled
-    seclabel u:r:bluetooth_loader:s0
     oneshot
 
 on property:bluetooth.hciattach=true
@@ -816,7 +815,6 @@ on property:usb_uicc.spi_bridge_enabled=0
 service charger /sbin/healthd -c
     class charger
     critical
-    seclabel u:r:healthd:s0
 
 service ssr_diag /system/bin/ssr_diag
     class late_start
