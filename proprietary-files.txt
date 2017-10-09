@@ -1,17 +1,17 @@
 # Bluetooth
-bin/btnvtool
+bin/btnvtool:vendor/bin/btnvtool
 vendor/lib/libbtnv.so
 vendor/lib/libaptX-1.0.0-rel-Android21-ARMv7A.so
 vendor/lib/libaptXHD-1.0.0-rel-Android21-ARMv7A.so
 vendor/lib/libaptXScheduler.so
 
 # ADSP
-bin/adsprpcd
-lib/rfsa/adsp/libapps_mem_heap.so
-lib/rfsa/adsp/libdspCV_skel.so
-lib/rfsa/adsp/libfastcvadsp.so
-lib/rfsa/adsp/libfastcvadsp_skel.so
-lib/rfsa/adsp/libscveT2T_skel.so
+bin/adsprpcd:vendor/bin/adsprpcd
+lib/rfsa/adsp/libapps_mem_heap.so:vendor/lib/rfsa/adsp/libapps_mem_heap.so
+lib/rfsa/adsp/libdspCV_skel.so:vendor/lib/rfsa/adsp/libdspCV_skel.so
+lib/rfsa/adsp/libfastcvadsp.so:vendor/lib/rfsa/adsp/libfastcvadsp.so
+lib/rfsa/adsp/libfastcvadsp_skel.so:vendor/lib/rfsa/adsp/libfastcvadsp_skel.so
+lib/rfsa/adsp/libscveT2T_skel.so:vendor/lib/rfsa/adsp/libscveT2T_skel.so
 vendor/lib/libacdbmapper.so
 vendor/lib/libadsprpc.so
 vendor/lib/libfastcvadsp_stub.so
@@ -33,26 +33,26 @@ vendor/lib/soundfx/libqcvirt.so
 vendor/lib/soundfx/libdirac.so
 
 # Camera
-bin/mm-qcamera-daemon
+bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon
 etc/android_model_facea.dat
 etc/android_model_faceg.dat
 etc/sdm_200_HOG3x3_Grid3x3_bin5_noproj_zero_reduced.bin
 etc/sdm_200_HOG3x3_Grid3x3_bin5_noproj_zero_reduced.bin.pca
-lib/hw/camera.vendor.msm8974.so
-lib/libc2dcolorconvert.so
-lib/libchromatix_imx135_liveshot.so
-lib/libchromatix_imx214_liveshot.so
-lib/libchromatix_imx215_liveshot.so
-lib/libchromatix_imx219_liveshot.so
-lib/libchromatix_imx224_liveshot.so
-lib/libchromatix_imx225_liveshot.so
-lib/libchromatix_imx226_liveshot.so
-lib/libchromatix_s5k3m2_liveshot.so
-lib/libmmcamera_interface.so
-lib/libmmjpeg_interface.so
-lib/libOmxVenc.so
-lib/libqomx_core.so
-lib/libRecoFace.so
+lib/hw/camera.vendor.msm8974.so:vendor/lib/hw/camera.vendor.msm8974.so
+lib/libc2dcolorconvert.so:vendor/lib/libc2dcolorconvert.so
+lib/libchromatix_imx135_liveshot.so:vendor/lib/libchromatix_imx135_liveshot.so
+lib/libchromatix_imx214_liveshot.so:vendor/lib/libchromatix_imx214_liveshot.so
+lib/libchromatix_imx215_liveshot.so:vendor/lib/libchromatix_imx215_liveshot.so
+lib/libchromatix_imx219_liveshot.so:vendor/lib/libchromatix_imx219_liveshot.so
+lib/libchromatix_imx224_liveshot.so:vendor/lib/libchromatix_imx224_liveshot.so
+lib/libchromatix_imx225_liveshot.so:vendor/lib/libchromatix_imx225_liveshot.so
+lib/libchromatix_imx226_liveshot.so:vendor/lib/libchromatix_imx226_liveshot.so
+lib/libchromatix_s5k3m2_liveshot.so:vendor/lib/libchromatix_s5k3m2_liveshot.so
+lib/libmmcamera_interface.so:vendor/lib/libmmcamera_interface.so
+lib/libmmjpeg_interface.so:vendor/lib/libmmjpeg_interface.so
+lib/libOmxVenc.so:vendor/lib/libOmxVenc.so
+lib/libqomx_core.so:vendor/lib/libqomx_core.so
+lib/libRecoFace.so:vendor/lib/libRecoFace.so
 vendor/lib/libAKM8963.so
 vendor/lib/libactuator_ad5823.so
 vendor/lib/libactuator_ad5823_camcorder.so
@@ -335,15 +335,15 @@ vendor/lib/libqomx_jpegenc.so
 vendor/lib/libubifocus.so
 
 # Charger
-bin/charger_monitor
-bin/hvdcp
+bin/charger_monitor:vendor/bin/charger_monitor
+bin/hvdcp:vendor/bin/hvdcp
 
 # ConsumerIR
-lib/hw/consumerir.msm8974.so
+lib/hw/consumerir.msm8974.so:vendor/lib/hw/consumerir.msm8974.so
 
 # DRM
-bin/qseecomd
-lib/libdrmdecrypt.so
+bin/qseecomd:vendor/bin/qseecomd
+lib/libdrmdecrypt.so:vendor/lib/libdrmdecrypt.so
 vendor/lib/libdrmdecrypt.2.so
 vendor/lib/liboemcrypto.so
 vendor/lib/libQSEEComAPI.so
@@ -353,7 +353,7 @@ vendor/lib/librpmb.so
 vendor/lib/libssd.so
 
 # Firmware
-lib/libstm-log.so
+lib/libstm-log.so:vendor/lib/libstm-log.so
 vendor/firmware/BCM20791B5_002.006.013.0011.0104_Customers_China_NCD_Unsigned_configdata.ncd
 vendor/firmware/PreI2C_v470.ncd
 vendor/firmware/keymaster/keymaster.b00
@@ -363,19 +363,19 @@ vendor/firmware/keymaster/keymaster.b03
 vendor/firmware/keymaster/keymaster.mdt
 
 # FM
-bin/fm_qsoc_patches
+bin/fm_qsoc_patches:vendor/bin/fm_qsoc_patches
 
 # GPS
-bin/loc_launcher
-lib/libloc_api_v02.so
-lib/libloc_ds_api.so
+bin/loc_launcher:vendor/bin/loc_launcher
+lib/libloc_api_v02.so:vendor/lib/libloc_api_v02.so
+lib/libloc_ds_api.so:vendor/lib/libloc_ds_api.so
 vendor/lib/hw/flp.default.so
 vendor/lib/libgeofence.so
 vendor/lib/libizat_core.so
 vendor/lib/liblbs_core.so
 
 # Graphics - from onyx
-bin/atmel_hover_tune.sh
+bin/atmel_hover_tune.sh:vendor/bin/atmel_hover_tune.sh
 vendor/lib/egl/eglsubAndroid.so|b8a5790c5b4ba4cf0018c94066104610c821ed8e
 vendor/lib/egl/libEGL_adreno.so|cd29673e990dba8158e961e287a79dfbd852d095
 vendor/lib/egl/libGLESv1_CM_adreno.so|ae86d16ba499ac6cdd3cecb91ae6b16b4c303984
@@ -397,8 +397,8 @@ vendor/lib/libscale.so|b44f44c633fa404d10e76aaa23593b516e08e2b8
 vendor/lib/libuiblur.so
 
 # Graphics firmware
-etc/firmware/a330_pfp.fw
-etc/firmware/a330_pm4.fw
+etc/firmware/a330_pfp.fw:vendor/firmware/a330_pfp.fw
+etc/firmware/a330_pm4.fw:vendor/firmware/a330_pm4.fw
 
 # Media
 vendor/lib/libHevcSwDecoder.so
@@ -410,8 +410,8 @@ vendor/lib/libOmxWmaDec.so
 vendor/lib/libmmosal.so
 
 # Perf
-bin/mpdecision
-bin/qosmgr
+bin/mpdecision:vendor/bin/mpdecision
+bin/qosmgr:vendor/bin/qosmgr
 vendor/lib/libqti-perfd-client.so
 
 # Postprocessing
@@ -420,36 +420,36 @@ vendor/lib/libmm-abl.so
 vendor/lib/libmm-abl-oem.so
 
 # Qualcomm framework
-bin/irsc_util
+bin/irsc_util:vendor/bin/irsc_util
 etc/data/qmi_config.xml
 vendor/lib/libt2tmanager.so
--vendor/lib/libdiag.so
+vendor/lib/libdiag.so
 vendor/lib/libdsi_netctrl.so
--vendor/lib/libdsutils.so
--vendor/lib/libidl.so
--vendor/lib/libqcci_legacy.so
+vendor/lib/libdsutils.so
+vendor/lib/libidl.so
+vendor/lib/libqcci_legacy.so
 vendor/lib/libqdi.so
 vendor/lib/libqdp.so
--vendor/lib/libqmi.so
+vendor/lib/libqmi.so
 vendor/lib/libqmi_cci.so
--vendor/lib/libqmi_client_qmux.so
+vendor/lib/libqmi_client_qmux.so
 vendor/lib/libqmi_common_so.so
 vendor/lib/libqmi_csi.so
 vendor/lib/libqmi_csvt_srvc.so
 vendor/lib/libqmi_encdec.so
-lib/libqminvapi.so
--vendor/lib/libqmiservices.so
+lib/libqminvapi.so:vendor/lib/libqminvapi.so
+vendor/lib/libqmiservices.so
 vendor/lib/libsmemlog.so
 vendor/lib/libsystem_health_mon.so
 
 # Radio
--priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
--app/shutdownlistener/shutdownlistener.apk
-bin/netmgrd
-bin/qmuxd
-bin/radish
-bin/rfs_access
-bin/rmt_storage
+priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+app/shutdownlistener/shutdownlistener.apk
+bin/netmgrd:vendor/bin/netmgrd
+bin/qmuxd:vendor/bin/qmuxd
+bin/radish:vendor/bin/radish
+bin/rfs_access:vendor/bin/rfs_access
+bin/rmt_storage:vendor/bin/rmt_storage
 etc/data/dsi_config.xml
 etc/data/netmgr_config.xml
 etc/permissions/qcnvitems.xml
@@ -457,7 +457,7 @@ etc/permissions/qcrilhook.xml
 framework/qcnvitems.jar
 framework/qcrilhook.jar
 framework/qti-telephony-common.jar
--lib/libmdmdetect.so
+lib/libmdmdetect.so:vendor/lib/libmdmdetect.so
 vendor/lib/libcneapiclient.so
 vendor/lib/libconfigdb.so
 vendor/lib/libnetmgr.so
@@ -473,7 +473,7 @@ vendor/lib/lib-rtpdaemoninterface.so
 vendor/lib/lib-rtpsl.so
 
 # Sensors
-bin/sensors.qcom
+bin/sensors.qcom:vendor/bin/sensors.qcom
 etc/sensor_def_qcomdev.conf
 vendor/lib/hw/activity_recognition.msm8974.so
 vendor/lib/hw/sensors.cancro.so:vendor/lib/sensors.msm8974.so
@@ -486,7 +486,7 @@ vendor/lib/libsensor_test.so
 vendor/lib/libsensor_user_cal.so
 
 # Thermal
-bin/thermal-engine
+bin/thermal-engine:vendor/bin/thermal-engine
 etc/thermal-engine-8974.conf
 etc/thermal-engine-perf.conf
 etc/thermanager.xml
@@ -494,41 +494,41 @@ vendor/lib/libthermalclient.so
 vendor/lib/libthermalioctl.so
 
 # Time services
-bin/time_daemon
--vendor/lib/libtime_genoff.so
--vendor/lib/libTimeService.so
--app/TimeService/TimeService.apk
+bin/time_daemon:vendor/bin/time_daemon
+vendor/lib/libtime_genoff.so
+vendor/lib/libTimeService.so
+app/TimeService/TimeService.apk
 
 # Venus (media) firmware
-etc/firmware/venus.b00
-etc/firmware/venus.b01
-etc/firmware/venus.b02
-etc/firmware/venus.b03
-etc/firmware/venus.b04
-etc/firmware/venus.mbn
-etc/firmware/venus.mdt
+etc/firmware/venus.b00:vendor/firmware/venus.b00
+etc/firmware/venus.b01:vendor/firmware/venus.b01
+etc/firmware/venus.b02:vendor/firmware/venus.b02
+etc/firmware/venus.b03:vendor/firmware/venus.b03
+etc/firmware/venus.b04:vendor/firmware/venus.b04
+etc/firmware/venus.mbn:vendor/firmware/venus.mbn
+etc/firmware/venus.mdt:vendor/firmware/venus.mdt
 
 # Widevine - from angler - OPR6.170623.017 factory image
 vendor/lib/mediadrm/libwvdrmengine.so|66ba66d047044f92eb0eada1faf6a5799ded90ab
 
 # WiFi
-bin/lowi-server
-bin/wcnss_filter
-bin/wcnss_service
-bin/xtwifi-client
-bin/xtwifi-inet-agent
-etc/firmware/cpp_firmware_v1_1_1.fw
-etc/firmware/cpp_firmware_v1_1_6.fw
-etc/firmware/cpp_firmware_v1_2_0.fw
-etc/firmware/wcnss.b00
-etc/firmware/wcnss.b01
-etc/firmware/wcnss.b02
-etc/firmware/wcnss.b04
-etc/firmware/wcnss.b06
-etc/firmware/wcnss.b07
-etc/firmware/wcnss.b08
-etc/firmware/wcnss.b09
-etc/firmware/wcnss.mdt
+bin/lowi-server:vendor/bin/lowi-server
+bin/wcnss_filter:vendor/bin/wcnss_filter
+bin/wcnss_service:vendor/bin/wcnss_service
+bin/xtwifi-client:vendor/bin/xtwifi-client
+bin/xtwifi-inet-agent:vendor/bin/xtwifi-inet-agent
+etc/firmware/cpp_firmware_v1_1_1.fw:vendor/firmware/cpp_firmware_v1_1_1.fw
+etc/firmware/cpp_firmware_v1_1_6.fw:vendor/firmware/cpp_firmware_v1_1_6.fw
+etc/firmware/cpp_firmware_v1_2_0.fw:vendor/firmware/cpp_firmware_v1_2_0.fw
+etc/firmware/wcnss.b00:vendor/firmware/wcnss.b00
+etc/firmware/wcnss.b01:vendor/firmware/wcnss.b01
+etc/firmware/wcnss.b02:vendor/firmware/wcnss.b02
+etc/firmware/wcnss.b04:vendor/firmware/wcnss.b04
+etc/firmware/wcnss.b06:vendor/firmware/wcnss.b06
+etc/firmware/wcnss.b07:vendor/firmware/wcnss.b07
+etc/firmware/wcnss.b08:vendor/firmware/wcnss.b08
+etc/firmware/wcnss.b09:vendor/firmware/wcnss.b09
+etc/firmware/wcnss.mdt:vendor/firmware/wcnss.mdt
 vendor/lib/libwifiscanner.so
 vendor/lib/libxtwifi_ulp_adaptor.so
 vendor/lib/libxtwifi_zpp_adaptor.so
