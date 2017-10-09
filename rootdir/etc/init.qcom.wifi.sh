@@ -203,9 +203,9 @@ case "$target" in
 
       # Use different wpa_supplicant.conf template between wcn driver
       # and ath6kl driver
-      rm /system/etc/wifi/wpa_supplicant.conf
-      ln -s /system/etc/wifi/wpa_supplicant_ath6kl.conf \
-                /system/etc/wifi/wpa_supplicant.conf
+      rm /vendor/wifi/wpa_supplicant.conf
+      ln -s /vendor/wifi/wpa_supplicant_ath6kl.conf \
+                /vendor/wifi/wpa_supplicant.conf
       ;;
 
       "AR6004-SDIO")
@@ -238,9 +238,9 @@ case "$target" in
 
       # Use different wpa_supplicant.conf template between wcn driver
       # and ath6kl driver
-      rm /system/etc/wifi/wpa_supplicant.conf
-      ln -s /system/etc/wifi/wpa_supplicant_ath6kl.conf \
-                /system/etc/wifi/wpa_supplicant.conf
+      rm /vendor/wifi/wpa_supplicant.conf
+      ln -s /vendor/wifi/wpa_supplicant_ath6kl.conf \
+                /vendor/wifi/wpa_supplicant.conf
       ;;
 
       *)
@@ -264,9 +264,9 @@ case "$target" in
 
       # Use different wpa_supplicant.conf template between wcn driver
       # and ath6kl driver
-      rm /system/etc/wifi/wpa_supplicant.conf
-      ln -s /system/etc/wifi/wpa_supplicant_wcn.conf \
-                /system/etc/wifi/wpa_supplicant.conf
+      rm /vendor/wifi/wpa_supplicant.conf
+      ln -s /vendor/wifi/wpa_supplicant_wcn.conf \
+                /vendor/wifi/wpa_supplicant.conf
 
       # Trigger WCNSS platform driver
       trigger_wcnss &
@@ -280,9 +280,9 @@ case "$target" in
 
       # Use different wpa_supplicant.conf template between wcn driver
       # and ath6kl driver
-      rm /system/etc/wifi/wpa_supplicant.conf
-      ln -s /system/etc/wifi/wpa_supplicant_wcn.conf \
-                /system/etc/wifi/wpa_supplicant.conf
+      rm /vendor/wifi/wpa_supplicant.conf
+      ln -s /vendor/wifi/wpa_supplicant_wcn.conf \
+                /vendor/wifi/wpa_supplicant.conf
     ;;
 
     msm8960*)
@@ -389,9 +389,9 @@ case "$target" in
 
         # Use different wpa_supplicant.conf template between wcn driver
         # and ath6kl driver
-        rm /system/etc/wifi/wpa_supplicant.conf
-        ln -s /system/etc/wifi/wpa_supplicant_ath6kl.conf \
-                /system/etc/wifi/wpa_supplicant.conf
+        rm /vendor/wifi/wpa_supplicant.conf
+        ln -s /vendor/wifi/wpa_supplicant_ath6kl.conf \
+                /vendor/wifi/wpa_supplicant.conf
         ;;
       "AR6004-SDIO")
         setprop wlan.driver.ath 2
@@ -412,9 +412,9 @@ case "$target" in
 
         # Use different wpa_supplicant.conf template between wcn driver
         # and ath6kl driver
-        rm /system/etc/wifi/wpa_supplicant.conf
-        ln -s /system/etc/wifi/wpa_supplicant_ath6kl.conf \
-                  /system/etc/wifi/wpa_supplicant.conf
+        rm /vendor/wifi/wpa_supplicant.conf
+        ln -s /vendor/wifi/wpa_supplicant_ath6kl.conf \
+                  /vendor/wifi/wpa_supplicant.conf
         ;;
       *)
         echo "*** WI-FI chip ID is not specified in /persist/wlan_chip_id **"
@@ -433,9 +433,9 @@ case "$target" in
 
         # Use different wpa_supplicant.conf template between wcn driver
         # and ath6kl driver
-        rm /system/etc/wifi/wpa_supplicant.conf
-        ln -s /system/etc/wifi/wpa_supplicant_wcn.conf \
-                  /system/etc/wifi/wpa_supplicant.conf
+        rm /vendor/wifi/wpa_supplicant.conf
+        ln -s /vendor/wifi/wpa_supplicant_wcn.conf \
+                  /vendor/wifi/wpa_supplicant.conf
 
         # Trigger WCNSS platform driver
         trigger_wcnss &
