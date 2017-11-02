@@ -16,6 +16,8 @@ LOCAL_SHARED_LIBRARIES := \
     android.hidl.token@1.0-utils \
     android.hardware.graphics.bufferqueue@1.0
 
+LOCAL_HEADER_LIBRARIES := libnativebase_headers
+
 LOCAL_MODULE := camera.msm8974
 LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_PROPRIETARY_MODULE := true
