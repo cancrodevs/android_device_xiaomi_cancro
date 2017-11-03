@@ -191,6 +191,9 @@ BOARD_USES_QC_TIME_SERVICES := true
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
 
+# USB
+TARGET_USES_LEGACY_ADB_INTERFACE := true
+
 # Enable dex-preoptimization to speed up first boot sequence
 ifeq ($(HOST_OS),linux)
   ifeq ($(TARGET_BUILD_VARIANT),user)
