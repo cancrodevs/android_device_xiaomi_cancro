@@ -35,8 +35,9 @@ on early-init
     setprop ro.wcnss.serialno ${ro.boot.serialno}
 
 on init
-    export LD_PRELOAD libshim_atomic.so
 
+    export LD_PRELOAD libshim_symbols.so
+    
     mkdir /persist 0771 system system
     mkdir /firmware 0771 system system
     symlink /sdcard /storage/sdcard0

@@ -45,10 +45,13 @@ PRODUCT_PACKAGES += \
 
 # Camera
 #PRODUCT_PACKAGES += \
-     libshim_atomic
 #    camera.msm8974 \
 #    libxml2 \
 #    Snap
+
+# Shims
+PRODUCT_PACKAGES += \
+    libshim_symbols
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -317,4 +320,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # call the proprietary setup
 $(call inherit-product, vendor/xiaomi/cancro/cancro-vendor.mk)
-
