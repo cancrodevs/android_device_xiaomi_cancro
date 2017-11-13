@@ -50,6 +50,10 @@ PRODUCT_PACKAGES += \
     libxml2 \
     Snap
 
+# Shims
+PRODUCT_PACKAGES += \
+    libshim_symbols
+
 # DRM
 PRODUCT_PACKAGES += \
     libshims_wvm
