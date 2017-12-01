@@ -86,9 +86,6 @@ TARGET_KERNEL_CONFIG               := lineageos_cancro_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 BOARD_DTBTOOL_ARGS                 := -2
 
-# Kernel headers
-TARGET_BOARD_KERNEL_HEADERS := $(CANCRO_PATH)/kernel-headers
-
 # Toolchain
 KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin
 KERNEL_TOOLCHAIN_PREFIX := arm-linux-androideabi-
