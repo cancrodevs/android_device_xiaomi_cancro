@@ -27,6 +27,12 @@ TARGET_BOARD_INFO_FILE ?= $(CANCRO_PATH)/board-info.txt
 # Binder
 TARGET_USES_64_BIT_BINDER := true
 
+# HIDL
+DEVICE_MANIFEST_FILE := $(CANCRO_PATH)/manifest.xml
+
+# Filesystem
+TARGET_FS_CONFIG_GEN := $(CANCRO_PATH)/config.fs
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8974
 TARGET_NO_BOOTLOADER         := true
@@ -52,7 +58,7 @@ BOARD_GLOBAL_CPPFLAGS += -DUSE_RIL_VERSION_10
 BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
 
 # Kernel
-BOARD_KERNEL_IMAGE_NAME := zImage
+BOARD_KERNEL_IMAGE_NAME            := zImage
 BOARD_KERNEL_CMDLINE               := console=none vmalloc=340M androidboot.hardware=qcom msm_rtb.filter=0x3b7 ehci-hcd.park=3 androidboot.selinux=permissive
 BOARD_KERNEL_SEPARATED_DT          := true
 BOARD_KERNEL_BASE                  := 0x00000000
@@ -185,9 +191,6 @@ TARGET_PROVIDES_LIBLIGHT := true
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
-# Keymaster
-TARGET_KEYMASTER_WAIT_FOR_QSEE := true
-
 # Simple time service client
 BOARD_USES_QC_TIME_SERVICES := true
 
@@ -210,9 +213,8 @@ DONT_DEXPREOPT_PREBUILTS := true
 
 # SELinux policies
 # qcom sepolicy
-#include device/qcom/sepolicy/sepolicy.mk
-
-#BOARD_SEPOLICY_DIRS += \
-#        $(CANCRO_PATH)/sepolicy
+include device/qcom/sepolicy/legacy-sepolicy.mk
+include device/qcom/sepolicy/sepolicy.mk
+BOARD_SEPOLICY_DIRS += $(CANCRO_PATH)/sepolicy
 
 -include vendor/xiaomi/cancro/BoardConfigVendor.mk
