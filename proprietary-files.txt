@@ -362,6 +362,9 @@ vendor/firmware/keymaster/keymaster.b02
 vendor/firmware/keymaster/keymaster.b03
 vendor/firmware/keymaster/keymaster.mdt
 
+# Keystore
+vendor/lib/hw/keystore.msm8974.so
+
 # FM
 bin/fm_qsoc_patches
 

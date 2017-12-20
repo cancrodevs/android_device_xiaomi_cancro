@@ -246,9 +246,20 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
  android.hardware.keymaster@3.0-impl
 
+
+# Gatekeeper HAL
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-impl
+
+# Healthd
+PRODUCT_PACKAGES += \
+    android.hardware.health@1.0-impl \
+    android.hardware.health@1.0-service
+
 # Keystore
 PRODUCT_PACKAGES += \
-    keystore.msm8974
+    keystore.msm8974 \
+    gatekeeper.msm8974
 
 # FM Radio
 PRODUCT_PACKAGES += \
