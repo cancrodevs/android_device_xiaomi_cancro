@@ -24,6 +24,18 @@ TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_cancro
 
 TARGET_BOARD_INFO_FILE ?= $(CANCRO_PATH)/board-info.txt
 
+# Display
+USE_DEVICE_SPECIFIC_DISPLAY := true
+DEVICE_SPECIFIC_DISPLAY_PATH := hardware/qcom/display
+
+# Media
+USE_DEVICE_SPECIFIC_MEDIA := true
+DEVICE_SPECIFIC_MEDIA_PATH := hardware/qcom/media
+
+# Audio
+USE_DEVICE_SPECIFIC_AUDIO := true
+DEVICE_SPECIFIC_AUDIO_PATH := hardware/qcom/audio
+
 # Binder
 TARGET_USES_64_BIT_BINDER := true
 
