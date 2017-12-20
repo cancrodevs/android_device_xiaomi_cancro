@@ -22,7 +22,6 @@ PRODUCT_PACKAGES += \
 # QCOM Config Script
 PRODUCT_PACKAGES += \
     hsic.control.bt.sh \
-    init.qcom.bt.sh \
     init.qcom.fm.sh \
     init.qcom.modem_links.sh \
     init.qcom.post_boot.sh \
