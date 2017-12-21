@@ -7,10 +7,10 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl
 
 # Camera
-PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.4-impl-legacy \
-    camera.device@1.0-impl \
-    camera.device@3.2-impl
+#PRODUCT_PACKAGES += \
+#    android.hardware.camera.provider@2.4-impl-legacy \
+#    camera.device@1.0-impl \
+#    camera.device@3.2-impl
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
