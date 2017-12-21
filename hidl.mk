@@ -20,10 +20,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl
 	
-# Gatekeeper HAL
-PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0-impl
-	
 # IR
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl
