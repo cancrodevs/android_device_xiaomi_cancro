@@ -18,3 +18,6 @@
 /sys/devices/qpnp-vadc-(.*)?/batt_therm                                              u:object_r:sysfs_thermal:s0
 /sys/devices/qpnp-vadc-(.*)?/emmc_therm                                              u:object_r:sysfs_thermal:s0
 /sys/devices/qpnp-vadc-(.*)?/quiet_therm                                             u:object_r:sysfs_thermal:s0
+
+# Time services
+/data/time(/.*)?                                                                     u:object_r:time_data_file:s0
