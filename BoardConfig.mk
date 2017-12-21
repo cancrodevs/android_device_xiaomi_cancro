@@ -32,6 +32,9 @@ DEVICE_SPECIFIC_DISPLAY_PATH := hardware/qcom/display
 USE_DEVICE_SPECIFIC_MEDIA := true
 DEVICE_SPECIFIC_MEDIA_PATH := hardware/qcom/media
 
+# Charger
+WITH_LINEAGE_CHARGER :=false
+
 # Audio
 USE_DEVICE_SPECIFIC_AUDIO := true
 DEVICE_SPECIFIC_AUDIO_PATH := hardware/qcom/audio
