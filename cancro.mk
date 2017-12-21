@@ -215,8 +215,7 @@ PRODUCT_PACKAGES += \
 
 # Keystore
 PRODUCT_PACKAGES += \
-    keystore.msm8974 \
-    gatekeeper.msm8974
+    keystore.msm8974
 
 # FM Radio
 PRODUCT_PACKAGES += \
