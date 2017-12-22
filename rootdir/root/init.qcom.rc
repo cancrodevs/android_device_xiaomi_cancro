@@ -41,6 +41,7 @@ on init
     mkdir /storage/udisk 000 system system
 
     export LD_SHIM_LIBS "/system/vendor/lib/sensors.cancro.so|libshim_sensors.so"
+    export LD_PRELOAD /system/lib/libboringssl-compat.so
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB

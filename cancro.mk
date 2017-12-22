@@ -201,7 +201,8 @@ PRODUCT_PACKAGES += \
     gralloc.msm8974 \
     hwcomposer.msm8974 \
     memtrack.msm8974 \
-    liboverlay
+    liboverlay \
+    libboringssl-compat
 
 # Radio
 PRODUCT_PACKAGES += \
