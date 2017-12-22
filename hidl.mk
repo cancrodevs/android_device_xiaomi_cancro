@@ -6,15 +6,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl
 
-# Boot Control
-PRODUCT_PACKAGES += \
-     android.hardware.boot@1.0-impl
-
 # Camera
-#PRODUCT_PACKAGES += \
-#    android.hardware.camera.provider@2.4-impl-legacy \
-#    camera.device@1.0-impl \
-#    camera.device@3.2-impl
+PRODUCT_PACKAGES += \
+    android.hardware.camera.provider@2.4-impl-legacy \
+    camera.device@1.0-impl-legacy
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
@@ -22,7 +17,8 @@ PRODUCT_PACKAGES += \
 	
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.0-impl
+    android.hardware.drm@1.0-impl \
+    android.hardware.drm@1.0-service
 	
 # IR
 PRODUCT_PACKAGES += \
@@ -43,7 +39,9 @@ PRODUCT_PACKAGES += \
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-impl \
-    android.hardware.audio.effect@2.0-impl
+    android.hardware.audio.effect@2.0-impl \
+    android.hardware.broadcastradio@1.0-impl \
+    android.hardware.soundtrigger@2.0-impl
 	
 # Graphics
 PRODUCT_PACKAGES += \
@@ -51,7 +49,8 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.composer@2.1-impl \
     android.hardware.graphics.mapper@2.0-impl \
-    android.hardware.memtrack@1.0-impl
+    android.hardware.memtrack@1.0-impl \
+    android.hardware.memtrack@1.0-service
 	
 # Keymaster
 PRODUCT_PACKAGES += \
@@ -71,12 +70,7 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.contexthub@1.0-impl \
     android.hardware.sensors@1.0-impl
-
-# Configstore
-PRODUCT_PACKAGES += \
-    android.hardware.configstore@1.0-service
 
 # NFC
 PRODUCT_PACKAGES += \
