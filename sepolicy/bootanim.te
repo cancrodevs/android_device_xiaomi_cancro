@@ -1,0 +1,2 @@
+#============= bootanim ==============
+allow bootanim hal_configstore_default:binder call;

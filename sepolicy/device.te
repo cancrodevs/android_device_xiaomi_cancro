@@ -3,3 +3,4 @@ type qcril_device, dev_type;
 type radio_config_device, dev_type;
 type rfkill_device, dev_type;
 type persist_block_device, dev_type;
+type nvbackup_block_device, dev_type;
