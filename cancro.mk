@@ -223,6 +223,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     libshim_sensors \
+    context_hub.default \
     sensors.cancro
 
 # Misc dependency packages
