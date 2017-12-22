@@ -6,6 +6,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl
 
+# Boot Control
+PRODUCT_PACKAGES += \
+     android.hardware.boot@1.0-impl
+
 # Camera
 #PRODUCT_PACKAGES += \
 #    android.hardware.camera.provider@2.4-impl-legacy \
@@ -55,8 +59,7 @@ PRODUCT_PACKAGES += \
 
 # Healthd
 PRODUCT_PACKAGES += \
-    android.hardware.health@1.0-impl \
-    android.hardware.health@1.0-service
+    android.hardware.health@1.0-impl
 
 # USB
 PRODUCT_PACKAGES += \
