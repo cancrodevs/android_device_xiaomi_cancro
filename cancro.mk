@@ -53,10 +53,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libshim_symbols
 
-# DRM
-PRODUCT_PACKAGES += \
-    libshims_wvm
-
 # IPv6
 PRODUCT_PACKAGES += \
     ebtables \
