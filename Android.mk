@@ -38,7 +38,7 @@ WCNSS_IMAGES := \
     wcnss.b00 wcnss.b01 wcnss.b02 wcnss.b04 wcnss.b06 \
     wcnss.b07 wcnss.b08 wcnss.b09 wcnss.mdt
 
-WCNSS_SYMLINKS := $(addprefix $(TARGET_OUT_ETC)/firmware/,$(notdir $(WCNSS_IMAGES)))
+WCNSS_SYMLINKS := $(addprefix $(TARGET_OUT_VENDOR)/firmware/,$(notdir $(WCNSS_IMAGES)))
 $(WCNSS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@echo "WCNSS firmware link: $@"
 	@mkdir -p $(dir $@)
@@ -47,7 +47,7 @@ $(WCNSS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(WCNSS_SYMLINKS)
 
-WCNSS_CONFIG_SYMLINK := $(TARGET_OUT_ETC)/firmware/wlan/prima/WCNSS_qcom_cfg.ini
+WCNSS_CONFIG_SYMLINK := $(TARGET_OUT_VENDOR)/firmware/wlan/prima/WCNSS_qcom_cfg.ini
 $(WCNSS_CONFIG_SYMLINK): $(LOCAL_INSTALLED_MODULE)
 	@echo "WCNSS config link: $@"
 	@mkdir -p $(dir $@)
