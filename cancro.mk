@@ -223,9 +223,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/_hals.conf:system/vendor/etc/sensors/_hals.conf
 
 PRODUCT_PACKAGES += \
-    libshim_sensors \
-    context_hub.default \
-    sensors.cancro
+    sensors.msm8974
 
 # Misc dependency packages
 PRODUCT_PACKAGES += \
