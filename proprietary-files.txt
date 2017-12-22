@@ -347,7 +347,7 @@ bin/hvdcp
 lib/hw/consumerir.msm8974.so
 
 # DRM
-vendor/bin/qseecomd:vendor/bin/qseecomd
+bin/qseecomd:vendor/bin/qseecomd
 lib/libdrmdecrypt.so:vendor/lib/libdrmdecrypt.so
 vendor/lib/libdrmdecrypt.2.so
 vendor/lib/liboemcrypto.so
@@ -368,7 +368,7 @@ vendor/firmware/keymaster/keymaster.b03
 vendor/firmware/keymaster/keymaster.mdt
 
 # Keystore
-vendor/lib/hw/keystore.msm8974.so
+lib/hw/keystore.msm8974.so:vendor/lib/hw/keystore.msm8974.so
 
 # FM
 bin/fm_qsoc_patches
