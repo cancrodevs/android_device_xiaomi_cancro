@@ -29,7 +29,7 @@
 
 on early-init
     mkdir /firmware 0771 system system
-    symlink /data/tombstones /tombstones
+    
 
 on init
     # Set the property to indicate type of virtual display to 0
@@ -62,6 +62,7 @@ on fs
 
 on post-fs-data
     mkdir /data/tombstones 0771 system system
+	symlink /data/tombstones /tombstones
     mkdir /tombstones/modem 0771 system system
     mkdir /tombstones/lpass 0771 system system
     mkdir /tombstones/wcnss 0771 system system
@@ -184,6 +185,7 @@ service qcamerasvr /vendor/bin/mm-qcamera-daemon
     class late_start
     user camera
     group camera system inet input graphics
+	disabled
 
 service qrngd /vendor/bin/qrngd -f
     class main
@@ -243,6 +245,7 @@ service adsprpcd /vendor/bin/adsprpcd
    class main
    user media
    group media
+   disabled
 
 service audiod /vendor/bin/audiod
    class late_start
