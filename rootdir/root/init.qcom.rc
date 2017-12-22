@@ -584,7 +584,7 @@ service start_hci_filter /system/vendor/bin/wcnss_filter
     group bluetooth
     disabled
 
-service hciattach /vendor/bin/hci_qcomm_init -e
+service hci_attach /vendor/bin/hci_qcomm_init -e
     class late_start
     user bluetooth
     group bluetooth net_bt_admin oem_2950 diag radio
@@ -592,7 +592,7 @@ service hciattach /vendor/bin/hci_qcomm_init -e
     oneshot
 
 on property:bluetooth.hciattach=true
-    start hciattach
+    start hci_attach
     setprop bluetooth.status on
 
 on property:bluetooth.hciattach=false
