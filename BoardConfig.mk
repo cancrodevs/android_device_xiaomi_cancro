@@ -124,12 +124,10 @@ FEATURE_QCRIL_UIM_SAP_SERVER_MODE := true
 # Graphics
 USE_OPENGL_RENDERER               := true
 TARGET_CONTINUOUS_SPLASH_ENABLED  := true
-TARGET_USES_C2D_COMPOSITION       := true
 TARGET_USE_COMPAT_GRALLOC_PERFORM := true
 TARGET_USES_ION                   := true
 OVERRIDE_RS_DRIVER                := libRSDriver_adreno.so
 NUM_FRAMEBUFFER_SURFACE_BUFFERS   := 3
-
 
 # Shader cache config options
 # Maximum size of the  GLES Shaders that can be cached for reuse.
