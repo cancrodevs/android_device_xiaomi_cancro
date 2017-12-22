@@ -129,12 +129,7 @@ TARGET_USE_COMPAT_GRALLOC_PERFORM := true
 TARGET_USES_ION                   := true
 OVERRIDE_RS_DRIVER                := libRSDriver_adreno.so
 NUM_FRAMEBUFFER_SURFACE_BUFFERS   := 3
-VSYNC_EVENT_PHASE_OFFSET_NS := 2000000
-SF_VSYNC_EVENT_PHASE_OFFSET_NS := 6000000
-TARGET_USES_GRALLOC1_ADAPTER := true
-TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
-TARGET_USES_HWC2 := true
-MAX_VIRTUAL_DISPLAY_DIMENSION := 2048
+
 
 # Shader cache config options
 # Maximum size of the  GLES Shaders that can be cached for reuse.
