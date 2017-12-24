@@ -95,6 +95,9 @@ AUDIO_FEATURE_ENABLED_HWDEP_CAL            := true
 AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS := true
 AUDIO_FEATURE_ENABLED_NEW_SAMPLE_RATE      := true
 AUDIO_FEATURE_LOW_LATENCY_PRIMARY          := true
+BOARD_USES_GENERIC_AUDIO                   := true
+TARGET_USES_QCOM_MM_AUDIO                  := true
+ALLOW_MISSING_DEPENDENCIES                 := true
 USE_CUSTOM_AUDIO_POLICY                    := 1
 USE_XML_AUDIO_POLICY_CONF                  := 1
 
