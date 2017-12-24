@@ -1,9 +1,3 @@
-type bluetooth_loader, domain;
-type bluetooth_loader_exec, exec_type, file_type;
-
-# Started by init
-init_daemon_domain(bluetooth_loader)
-
 # Set persist.service.bdroid.* and bluetooth.* property values
 set_prop(bluetooth_loader, bluetooth_prop)
 

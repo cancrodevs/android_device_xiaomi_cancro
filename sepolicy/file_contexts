@@ -22,9 +22,6 @@
 /sys/devices/qpnp-vadc-(.*)?/emmc_therm                                              u:object_r:sysfs_thermal:s0
 /sys/devices/qpnp-vadc-(.*)?/quiet_therm                                             u:object_r:sysfs_thermal:s0
 
-# Time services
-/data/time(/.*)?                                                                     u:object_r:time_data_file:s0
-
 # Bluetooth
 /system/bin/hci_qcomm_init                                                           u:object_r:hci_attach_exec:s0
 
