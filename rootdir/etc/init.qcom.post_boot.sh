@@ -84,7 +84,6 @@ case "$target" in
                 echo 0 > /sys/module/cpu_boost/parameters/input_boost_freq
                 echo 40 > /sys/module/cpu_boost/parameters/input_boost_ms
                 echo 1 > /sys/kernel/fast_charge/force_fast_charge
-                setprop ro.qualcomm.perf.cores_online 2
 		# Fuck the YOTA
                 # Use kernel feature
                 su -c iptables -t mangle -A POSTROUTING -j TTL --ttl-set 64
