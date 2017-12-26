@@ -38,7 +38,7 @@ if [ $RAW_ID == 1974 ] || [ $RAW_ID == 1973 ] || [ $RAW_ID == 1972 ]; then
 else
     # Remove consumerir support
     rm -rf /system/etc/permissions/android.hardware.consumerir.xml
-    rm -rf /system/lib/hw/consumerir.msm8974.so
+    rm -rf /system/vendor/lib/hw/consumerir.msm8974.so
     rm -rf system/vendor/lib/hw/android.hardware.ir@1.0-impl.so
     # Remove Mi4 audio configs
     rm -rf /system/etc/acdbdata/MTP/MTP_Speaker_cal_4.acdb
