@@ -44,10 +44,10 @@ PRODUCT_PACKAGES += \
     libbt-vendor
 
 # Camera
-#PRODUCT_PACKAGES += \
-#    camera.msm8974 \
-#    libxml2 \
-#    Snap
+PRODUCT_PACKAGES += \
+    camera.msm8974 \
+    libxml2 \
+    Snap
 
 # Shims
 PRODUCT_PACKAGES += \
