@@ -4,8 +4,8 @@ vendor/lib/libbtnv.so
 
 # Bluetooth - from griffin - NCLS25.86-11-4-6-5
 bin/hci_qcomm_init:vendor/bin/hci_qcomm_init
-vendor/lib/libaptX-1.0.0-rel-Android21-ARMv7A.so|b03772672144d4b750a5672c2922aded93bb0512
-vendor/lib/libaptXScheduler.so|6a0a2d564fde8434018b9840ce81d976b4d4ab28
+vendor/lib/libaptX-1.0.0-rel-Android21-ARMv7A.so
+vendor/lib/libaptXScheduler.so
 
 # ADSP
 bin/adsprpcd:vendor/bin/adsprpcd
@@ -36,6 +36,7 @@ lib/soundfx/libdirac.so
 
 # Camera
 bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon
+bin/mm-pp-daemon:vendor/bin/mm-pp-daemon
 etc/android_model_facea.dat
 etc/android_model_faceg.dat
 etc/sdm_200_HOG3x3_Grid3x3_bin5_noproj_zero_reduced.bin
@@ -50,6 +51,7 @@ lib/libchromatix_imx224_liveshot.so
 lib/libchromatix_imx225_liveshot.so
 lib/libchromatix_imx226_liveshot.so
 lib/libchromatix_s5k3m2_liveshot.so
+lib/libmm-qcamera.so:vendor/lib/libmm-qcamera.so
 lib/libmmcamera_interface.so:vendor/lib/libmmcamera_interface.so
 lib/libmmjpeg_interface.so:vendor/lib/libmmjpeg_interface.so
 lib/libOmxVenc.so
@@ -327,6 +329,7 @@ vendor/lib/libmmcamera_x4_s5k3m2_eeprom.so
 vendor/lib/libmmcamera_x5_imx214_eeprom.so
 vendor/lib/libmmipl.so
 vendor/lib/libmmjpeg.so
+vendor/lib/libmmparser.so
 vendor/lib/libmmqjpeg_codec.so
 vendor/lib/libmmQSM.so
 vendor/lib/liboemcamera.so
@@ -350,10 +353,9 @@ vendor/lib/hw/consumerir.msm8974.so
 
 # DRM
 bin/qseecomd:vendor/bin/qseecomd
-lib/libdrmdecrypt.so:vendor/lib/libdrmdecrypt.so
-vendor/lib/libdrmdecrypt.2.so
 vendor/lib/liboemcrypto.so
 vendor/lib/libQSEEComAPI.so
+vendor/lib/libdrmdiag.so
 vendor/lib/libdrmfs.so
 vendor/lib/libdrmtime.so
 vendor/lib/librpmb.so
