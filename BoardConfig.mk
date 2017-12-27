@@ -29,6 +29,7 @@ TARGET_USES_64_BIT_BINDER := true
 
 # HIDL
 DEVICE_MANIFEST_FILE := $(CANCRO_PATH)/manifest.xml
+DEVICE_MATRIX_FILE   := $(CANCRO_PATH)/compatibility_matrix.xml
 
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(CANCRO_PATH)/config.fs
