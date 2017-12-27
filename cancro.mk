@@ -254,9 +254,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/_hals.conf:system/vendor/etc/sensors/_hals.conf
 
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@1.0-impl \
-    libshim_sensors \
-    sensors.cancro
+    sensors.msm8974
 
 # USB
 PRODUCT_PACKAGES += \

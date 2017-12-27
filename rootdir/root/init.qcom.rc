@@ -38,8 +38,6 @@ on init
     symlink /sdcard /storage/sdcard0
     mkdir /storage/udisk 000 system system
 
-    export LD_SHIM_LIBS "/system/vendor/lib/sensors.cancro.so|libshim_sensors.so"
-
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
