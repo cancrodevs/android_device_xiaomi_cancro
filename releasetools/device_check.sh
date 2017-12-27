@@ -26,22 +26,25 @@ if [ $RAW_ID == 1974 ] || [ $RAW_ID == 1973 ] || [ $RAW_ID == 1972 ]; then
     rm -rf /system/etc/*nfc*
     rm -rf /system/etc/permissions/*nfc*
     rm -rf /system/vendor/firmware/*bcm*
-    rm -rf /system/vendor/lib/hw/android.hardware.nfc@1.0-impl.so
+    rm -rf /system/vendor/lib/hw/android.hardware.nfc@*
+    rm -rf /system/vendor/bin/hw/android.hardware.nfc*
     # Use Mi4 audio configs
     rm -f /system/etc/acdbdata/MTP/MTP_Speaker_cal.acdb
     mv /system/etc/acdbdata/MTP/MTP_Speaker_cal_4.acdb /system/etc/acdbdata/MTP/MTP_Speaker_cal.acdb
-    rm -f /system/etc/mixer_paths.xml
-    mv /system/etc/mixer_paths_4.xml /system/etc/mixer_paths.xml
+    rm -f /system/vendor/etc/mixer_paths.xml
+    mv /system/vendor/etc/mixer_paths_4.xml /system/vendor/etc/mixer_paths.xml
     # Mi4 libdirac config
     rm -f /system/vendor/etc/diracmobile.config
     mv /system/vendor/etc/diracmobile_4.config /system/vendor/etc/diracmobile.config
 else
     # Remove consumerir support
     rm -rf /system/etc/permissions/android.hardware.consumerir.xml
-    rm -rf /system/lib/hw/consumerir.msm8974.so
+    rm -rf /system/vendor/lib/hw/consumerir.msm8974.so
+    rm -rf system/vendor/lib/hw/android.hardware.ir@*.so
+    rm -rf system/vendor/bin/hw/android.hardware.ir@*.so
     # Remove Mi4 audio configs
     rm -rf /system/etc/acdbdata/MTP/MTP_Speaker_cal_4.acdb
-    rm -f /system/etc/mixer_paths_4.xml
+    rm -f /system/vendor/etc/mixer_paths_4.xml
     # Remove Mi4 libdirac config
     rm -f /system/vendor/etc/diracmobile_4.config
 fi
