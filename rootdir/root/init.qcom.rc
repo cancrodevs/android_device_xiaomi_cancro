@@ -38,7 +38,11 @@ on init
 
     mkdir /persist 0771 system system
     mkdir /firmware 0771 system system
-    symlink /sdcard /storage/sdcard0
+    
+    export EXTERNAL_STORAGE /sdcard
+    
+    # Support legacy paths
+    symlink /sdcard /mnt/sdcard    symlink /sdcard /storage/sdcard0
     mkdir /storage/udisk 000 system system
 
 on early-boot
