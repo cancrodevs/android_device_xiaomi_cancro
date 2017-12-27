@@ -5,6 +5,10 @@ LOCAL_PATH := device/xiaomi/cancro
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+# NFC hack
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/manifest_nfc.xml:system/vendor/manifest_nfc.xml
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
