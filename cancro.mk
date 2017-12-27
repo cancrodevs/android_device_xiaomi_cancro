@@ -282,6 +282,10 @@ PRODUCT_COPY_FILES += \
     device/xiaomi/cancro/seccomp/mediacodec-seccomp.policy:system/vendor/etc/seccomp_policy/mediacodec.policy \
     device/xiaomi/cancro/seccomp/mediaextractor-seccomp.policy:system/vendor/etc/seccomp_policy/mediaextractor.policy
 
+# Tools
+PRODUCT_PACKAGES += \
+    libtinyxml
+
 # Screen density
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi xxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
