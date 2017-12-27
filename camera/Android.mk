@@ -1,26 +1,16 @@
-LOCAL_PATH := $(call my-dir)
+MM_V4L2_DRIVER_LIST += msm8960
+MM_V4L2_DRIVER_LIST += msm8974
+MM_V4L2_DRIVER_LIST += msm8226
+MM_V4L2_DRIVER_LIST += msm8610
+MM_V4L2_DRIVER_LIST += msm_bronze
+MM_V4L2_DRIVER_LIST += msm8916
 
-include $(CLEAR_VARS)
+LOCAL_CLANG := false
 
-LOCAL_SRC_FILES := \
-    CameraWrapper.cpp
-
-LOCAL_C_INCLUDES := \
-    $(LOCAL_PATH)/../include \
-    frameworks/native/include/media/openmax \
-    system/media/camera/include
-
-LOCAL_STATIC_LIBRARIES := libbase libarect
-LOCAL_SHARED_LIBRARIES := \
-    libhardware liblog libcamera_client libutils libcutils libsensor libdl\
-    android.hidl.token@1.0-utils \
-    android.hardware.graphics.bufferqueue@1.0
-
-LOCAL_HEADER_LIBRARIES := libnativebase_headers
-
-LOCAL_MODULE := camera.msm8974
-LOCAL_MODULE_RELATIVE_PATH := hw
-LOCAL_PROPRIETARY_MODULE := true
-LOCAL_MODULE_TAGS := optional
-
-include $(BUILD_SHARED_LIBRARY)
+ifeq ($(call is-board-platform-in-list,$(MM_V4L2_DRIVER_LIST)),true)
+  ifneq ($(USE_CAMERA_STUB),true)
+    ifneq ($(BUILD_TINY_ANDROID),true)
+      include $(call all-subdir-makefiles)
+    endif
+  endif
+endif

@@ -88,8 +88,6 @@ persist.usb.hvdcp.detect=true
 
 persist.camera.cpp.duplication=false
 camera2.portability.force_api=1
-media.stagefright.legacyencoder=true
-media.stagefright.less-secure=true
 
 qcom.bluetooth.soc=smd
 ro.bluetooth.hfp.ver=1.7
