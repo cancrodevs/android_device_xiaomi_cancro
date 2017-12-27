@@ -7,6 +7,8 @@ MM_V4L2_DRIVER_LIST += msm8916
 
 LOCAL_CLANG := false
 
+LOCAL_HEADER_LIBRARIES := libnativebase_headers
+
 ifeq ($(call is-board-platform-in-list,$(MM_V4L2_DRIVER_LIST)),true)
   ifneq ($(USE_CAMERA_STUB),true)
     ifneq ($(BUILD_TINY_ANDROID),true)
