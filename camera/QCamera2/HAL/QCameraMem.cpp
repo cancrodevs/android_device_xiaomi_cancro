@@ -1023,10 +1023,8 @@ native_handle_t *QCameraVideoMemory::updateNativeHandle(uint32_t index, bool met
         nh = mNativeHandle[index];
 #ifdef USE_MEDIA_EXTENSIONS
         packet->pHandle = nh;
-        packet->eType = kMetadataBufferTypeNativeHandleSource;
 #else
         packet->meta_handle = nh;
-        packet->buffer_type = kMetadataBufferTypeCameraSource;
 #endif
     }
     return nh;
@@ -1223,7 +1221,6 @@ int QCameraVideoMemory::allocate(int count, int size)
 
         media_metadata_buffer * packet =
                 (media_metadata_buffer *)mMetadata[i]->data;
-#ifdef USE_MEDIA_EXTENSIONS
         if (!mNativeHandle[i]) {
             mNativeHandle[i] = native_handle_create(1, VIDEO_METADATA_NUM_INTS);
             if (mNativeHandle[i] == NULL) {
@@ -1238,6 +1235,7 @@ int QCameraVideoMemory::allocate(int count, int size)
                return NO_MEMORY;
             }
         }
+#ifdef USE_MEDIA_EXTENSIONS
         packet->eType = kMetadataBufferTypeNativeHandleSource;
         packet->pHandle = mNativeHandle[i];
 #else

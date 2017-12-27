@@ -4173,9 +4173,13 @@ int32_t QCameraParameters::initDefaultParameters()
     set(KEY_QC_MAX_FOCUS_POS_INDEX, m_pCapability->max_focus_pos[CAM_MANUAL_FOCUS_MODE_INDEX]);
 
     m_pCapability->min_focus_pos[CAM_MANUAL_FOCUS_MODE_DAC_CODE] = 0;
+#ifdef CANCRO_CAMERA_HAL
+    m_pCapability->max_focus_pos[CAM_MANUAL_FOCUS_MODE_DAC_CODE] = 717;
+#else
     m_pCapability->max_focus_pos[CAM_MANUAL_FOCUS_MODE_DAC_CODE] = 1023;
+#endif    
     set(KEY_QC_MIN_FOCUS_POS_DAC, m_pCapability->min_focus_pos[CAM_MANUAL_FOCUS_MODE_DAC_CODE]);
-    set(KEY_QC_MIN_FOCUS_POS_DAC, m_pCapability->max_focus_pos[CAM_MANUAL_FOCUS_MODE_DAC_CODE]);
+    set(KEY_QC_MAX_FOCUS_POS_DAC, m_pCapability->max_focus_pos[CAM_MANUAL_FOCUS_MODE_DAC_CODE]);
 
     // Set Saturation
     set(KEY_QC_MIN_SATURATION, m_pCapability->saturation_ctrl.min_value);
@@ -4287,8 +4291,15 @@ int32_t QCameraParameters::initDefaultParameters()
     setISOValue(ISO_AUTO);
 
     // Set exposure time, we should get them from m_pCapability
+#ifdef CANCRO_CAMERA_HAL
+    m_pCapability->min_exposure_time = 0.200000;
+    m_pCapability->max_exposure_time = 2000.000000;
+    setFloat(KEY_QC_MIN_EXPOSURE_TIME, m_pCapability->min_exposure_time);
+    setFloat(KEY_QC_MAX_EXPOSURE_TIME, m_pCapability->max_exposure_time);
+#else
     set(KEY_QC_MIN_EXPOSURE_TIME, m_pCapability->min_exposure_time/1000.0);
     set(KEY_QC_MAX_EXPOSURE_TIME, m_pCapability->max_exposure_time/1000.0);
+#endif
     //setExposureTime("0");
 
     // Set HFR
@@ -5369,8 +5380,8 @@ int32_t  QCameraParameters::setExposureTime(const char *expTimeStr)
 {
     if (expTimeStr != NULL) {
         int32_t expTimeUs = atoi(expTimeStr);
-        int32_t min_exp_time = m_pCapability->min_exposure_time; /* 200 */
-        int32_t max_exp_time = m_pCapability->max_exposure_time; /* 2000000 */
+        float min_exp_time = m_pCapability->min_exposure_time; /* 0.200 */
+        float max_exp_time = m_pCapability->max_exposure_time; /* 2000.000 */
 
         // expTime == 0 means not to use manual exposure time.
         if (expTimeUs == 0 ||
