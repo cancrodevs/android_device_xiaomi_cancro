@@ -27,6 +27,9 @@ TARGET_BOARD_INFO_FILE ?= $(CANCRO_PATH)/board-info.txt
 # Binder
 TARGET_USES_64_BIT_BINDER := true
 
+# HIDL
+DEVICE_MANIFEST_FILE := $(CANCRO_PATH)/manifest.xml
+
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(CANCRO_PATH)/config.fs
 

@@ -232,10 +232,6 @@ PRODUCT_PACKAGES += \
     memtrack.msm8974 \
     liboverlay
 
-# HIDL
-DEVICE_MANIFEST_FILE := \
-    $(LOCAL_PATH)/manifest.xml
-
 # Radio
 PRODUCT_PACKAGES += \
     libcnefeatureconfig \
