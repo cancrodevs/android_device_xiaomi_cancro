@@ -274,7 +274,7 @@ service imsdatadaemon /vendor/bin/imsdatadaemon
 service wcnss-service /vendor/bin/wcnss_service
     class main
     user system
-    group system wifi radio
+    group system wifi radio oem_2950
     oneshot
 
 service sysmatsir /vendor/bin/smonsir

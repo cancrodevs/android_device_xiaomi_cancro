@@ -648,7 +648,7 @@ service qmiproxy /vendor/bin/qmiproxy
 service qmuxd /vendor/bin/qmuxd
     class main
     user radio
-    group radio audio bluetooth gps qcom_diag wakelock
+    group radio audio bluetooth gps oem_2950 wakelock
 
 service netmgrd /vendor/bin/netmgrd
     class main
