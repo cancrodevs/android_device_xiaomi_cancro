@@ -16,6 +16,8 @@
 
 LOCAL_PATH := $(call my-dir)
 
+INTERNAL_LOCAL_CLANG_EXCEPTION_PROJECTS := $(LOCAL_PATH)
+
 ifeq ($(TARGET_DEVICE),cancro)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
@@ -46,5 +48,4 @@ $(WCNSS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /firmware/image/$(notdir $@) $@
 
 ALL_DEFAULT_INSTALLED_MODULES += $(WCNSS_SYMLINKS)
-
 endif
