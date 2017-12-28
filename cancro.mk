@@ -20,7 +20,8 @@ PRODUCT_PACKAGES += \
     init.qcom.factory.sh \
     init.qcom.sh \
     init.qcom.ssr.sh \
-    init.qcom.usb.sh
+    init.qcom.usb.sh \
+    loggy.sh
 
 # QCOM Config Script
 PRODUCT_PACKAGES += \
