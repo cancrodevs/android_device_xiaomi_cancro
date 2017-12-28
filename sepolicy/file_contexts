@@ -21,8 +21,3 @@
 /sys/devices/qpnp-vadc-(.*)?/emmc_therm                                              u:object_r:sysfs_thermal:s0
 /sys/devices/qpnp-vadc-(.*)?/quiet_therm                                             u:object_r:sysfs_thermal:s0
 
-# Bluetooth
-/system/bin/hci_qcomm_init                                                           u:object_r:hci_attach_exec:s0
-
-# audiod
-/system/bin/audiod                                                                   u:object_r:audiod_exec:s0
