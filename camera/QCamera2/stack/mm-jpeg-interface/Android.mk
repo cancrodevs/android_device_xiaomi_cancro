@@ -23,6 +23,9 @@ ifeq ($(strip $(TARGET_USES_ION)),true)
     LOCAL_CFLAGS += -DUSE_ION
 endif
 
+ifeq ($(BOARD_USES_3_10), true)
+    LOCAL_CFLAGS += -DBOARD_USES_3_10
+endif
 
 ifeq ($(call is-board-platform-in-list, msm8974),true)
     LOCAL_CFLAGS+= -DMM_JPEG_CONCURRENT_SESSIONS_COUNT=2

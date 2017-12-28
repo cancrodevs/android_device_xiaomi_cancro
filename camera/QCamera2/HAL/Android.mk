@@ -29,6 +29,10 @@ ifeq ($(TARGET_USES_MEDIA_EXTENSIONS), true)
 LOCAL_CFLAGS += -DUSE_MEDIA_EXTENSIONS
 endif
 
+ifeq ($(BOARD_USES_3_10), true)
+LOCAL_CFLAGS += -DBOARD_USES_3_10
+endif
+
 #Debug logs are enabled
 #LOCAL_CFLAGS += -DDISABLE_DEBUG_LOG
 

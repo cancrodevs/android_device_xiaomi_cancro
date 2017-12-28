@@ -53,7 +53,12 @@ void *buffer_allocate(buffer_t *p_buffer, int cached)
    p_buffer->alloc.len = p_buffer->size;
    p_buffer->alloc.align = 4096;
    p_buffer->alloc.flags = (cached) ? ION_FLAG_CACHED : 0;
+
+#ifdef BOARD_USES_3_10  
+   p_buffer->alloc.heap_id_mask = 0x1 << ION_IOMMU_HEAP_ID;
+#else
    p_buffer->alloc.heap_mask = 0x1 << ION_IOMMU_HEAP_ID;
+#endif
 
    p_buffer->ion_fd = open("/dev/ion", O_RDONLY);
    if(p_buffer->ion_fd < 0) {

@@ -24,6 +24,15 @@ TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_cancro
 
 TARGET_BOARD_INFO_FILE ?= $(CANCRO_PATH)/board-info.txt
 
+# 3.10 kernel
+BOARD_USES_3_10 := false
+
+ifeq ($(BOARD_USES_3_10), true)
+    # Display
+    USE_DEVICE_SPECIFIC_DISPLAY  := true
+    DEVICE_SPECIFIC_DISPLAY_PATH := hardware/qcom/display/8994
+endif
+
 # Binder
 TARGET_USES_64_BIT_BINDER := true
 
@@ -139,9 +148,12 @@ MAX_EGL_CACHE_SIZE := 2048*1024
 
 # Camera
 TARGET_USE_COMPAT_GRALLOC_ALIGN := true
-USE_DEVICE_SPECIFIC_CAMERA := true
-TARGET_USE_VENDOR_CAMERA_EXT := true
-TARGET_USES_MEDIA_EXTENSIONS := true
+USE_DEVICE_SPECIFIC_CAMERA      := true
+TARGET_USE_VENDOR_CAMERA_EXT    := true
+TARGET_USES_MEDIA_EXTENSIONS    := true
+
+# SnapDragon LLVM Compiler
+TARGET_USE_SDCLANG := true
 
 # Wifi
 BOARD_HAS_QCOM_WLAN              := true

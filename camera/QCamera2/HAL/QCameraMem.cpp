@@ -353,7 +353,13 @@ int QCameraMemory::allocOneBuffer(QCameraMemInfo &memInfo,
     if (cached) {
         alloc.flags = ION_FLAG_CACHED;
     }
+
+#ifdef BOARD_USES_3_10
+    alloc.heap_id_mask = heap_id;
+#else
     alloc.heap_mask = heap_id;
+#endif
+
     rc = ioctl(main_ion_fd, ION_IOC_ALLOC, &alloc);
     if (rc < 0) {
         ALOGE("ION allocation failed: %s\n", strerror(errno));
