@@ -21,3 +21,11 @@
 /sys/devices/qpnp-vadc-(.*)?/emmc_therm                                              u:object_r:sysfs_thermal:s0
 /sys/devices/qpnp-vadc-(.*)?/quiet_therm                                             u:object_r:sysfs_thermal:s0
 
+
+# BT/WiFi MAC
+/persist/.genmac                                                                     u:object_r:wifi_data_file:s0
+/persist/.bt_nv.bin                                                                  u:object_r:bluetooth_data_file:s0
+  
+# Location
+/data/misc/location/mq(/.*)?                                                         u:object_r:location_data_file:s0
+
